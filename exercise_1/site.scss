@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    flex-direction: row;
+
+    div {
+        text-align: center;
+        
+        width: 120px;
+        height: 120px;
+        border: 0.5px black solid;
+        margin: 2px;
+    }
+}
+
+.base-1 {
+    background-color: red;
+}
+
+.base-2 {
+    background-color: green;
+}
+
+.base-3 {
+    background-color: blue;
+}
+
+
+@mixin color-divs ($total-div, $class-name, $start-color, $container) {
+    $loop_color: $start-color;
+
+    @for $i from 0 through $total-div {
+        @if ($class-name=='darken') {
+            $loop_color: darken($loop_color, 5%);
+        }
+
+        @else {
+            $loop_color: lighten($loop_color, 5%);
+        }
+
+        #{$container} {
+            & .#{$class-name}-#{$i} {
+                background-color: $loop_color;
+            }
+        }
+    }
+}
+
+@include color-divs(4, 'darken', red, '.red');
+@include color-divs(4, 'lighten', red, '.red');
+@include color-divs(4, 'darken', green, '.green');
+@include color-divs(4, 'lighten', green, '.green');
+@include color-divs(4, 'darken', blue, '.blue');
+@include color-divs(4, 'lighten', blue, '.blue');
