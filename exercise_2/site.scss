@@ -1,0 +1,49 @@
+// .theme1 {
+    @import '_theme1.scss';
+// }
+
+// .theme2 {
+//     @import '_theme2.scss';
+// }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: $container_color;
+    width: 86vw;
+    height: 92vh;
+    padding: 20px 100px;
+}
+
+div div {
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+    text-align: center;
+    padding:10px;
+    border: 1px black solid;
+}
+
+.base {
+    background-color: $color_base;
+}
+
+.important {
+    background-color: $color_important;
+}
+
+.warning {
+    background-color: $color_warning;
+}
+
+.principalFont{
+    font-family: $principal_font;
+}
+
+.secundaryFont {
+    font-family: $secundary_font;
+}
+
+.BoxShadow {
+    box-shadow: $box_shadow;
+}

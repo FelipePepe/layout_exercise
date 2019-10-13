@@ -1,0 +1,25 @@
+/*
+    Tema 2: Se incluiran los siguientes parametros en los div.
+        - Color
+        - Fuente
+        - Border Radius
+        - Shadow box
+ */
+
+$container_color: blueviolet;
+
+$color_base : blue;
+
+$color_important: darkblue;
+
+$color_warning: cyan;
+
+$principal_font: Times;
+
+$secundary_font: comic;
+
+$box_shadow: -5px 5px 5px;
+
+div div {
+    border-radius: 10px;
+}
